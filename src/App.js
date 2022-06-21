@@ -8,6 +8,7 @@ const App = () => {
     age: "",
     comments: "",
     isFriendly: true,
+    employment: "",
   });
   console.log(formData);
   const formDataHandler = (e) => {
@@ -71,6 +72,36 @@ const App = () => {
       />
       <label htmlFor="isFriendly">Are you Friendly</label>
       <br />
+      {/* RADIO BUTTONS */}
+      <fieldset>
+        <legend>Employment Status</legend>
+        <input
+          type="radio"
+          name="employment"
+          id="unemployed"
+          value="unemployed"
+          onChange={formDataHandler}
+        />
+        <label htmlFor="unemployed">Unemployed</label>
+        <br />
+        <input
+          type="radio"
+          name="employment"
+          id="partTime"
+          value="part-time"
+          onChange={formDataHandler}
+        />
+        <label htmlFor="partTime">Part-Time</label>
+        <br />
+        <input
+          type="radio"
+          name="employment"
+          id="fullTime"
+          value="full-time"
+          onChange={formDataHandler}
+        />
+        <label htmlFor="fullTime">Full-Time</label>
+      </fieldset>
     </div>
   );
 };
